@@ -234,40 +234,6 @@ Migration of legacy PHP APIs to modern Golang microservices.
 
 ---
 
-# ⚙️ Setup Required For Snake Animation
-
-Create the following GitHub Action in:
-
-`.github/workflows/snake.yml`
-
-```yaml
-name: Generate Snake
-
-on:
-  schedule:
-    - cron: "0 */12 * * *"
-  workflow_dispatch:
-
-jobs:
-  build:
-    runs-on: ubuntu-latest
-
-    steps:
-      - uses: Platane/snk@master
-        with:
-          github_user_name: vikhyat-sharma
-          svg_out_path: dist/github-contribution-grid-snake.svg
-
-      - uses: crazy-max/ghaction-github-pages@v3
-        with:
-          target_branch: output
-          build_dir: dist
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-```
-
----
-
 # 💡 Fun Fact
 
 I enjoy building scalable backend systems, optimizing distributed architectures, and exploring cloud-native engineering patterns.
